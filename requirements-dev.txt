@@ -1,0 +1,3 @@
+pytest>=8,<10
+PyYAML>=6,<7
+dotbot>=1.24,<2

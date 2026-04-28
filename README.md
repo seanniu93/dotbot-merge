@@ -50,3 +50,12 @@ The plugin is implemented in `merge.py`.
 - `error`: fail if the target exists and differs from the generated content
 - `overwrite`: remove the target and write the new content
 - `backup`: rename the target to `.dotbot-backup.<timestamp>` before writing
+
+## Testing
+
+```shell
+uv venv
+source .venv/bin/activate
+uv pip install -r requirements-dev.txt
+pytest
+```
