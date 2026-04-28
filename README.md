@@ -12,6 +12,12 @@ Dotbot plugin that adds a `merge:` directive for generating files by concatenati
 > [!NOTE]  
 > This plugin only supports unstructured text concatenation. It does not parse, merge, or validate structured formats like JSON, YAML, TOML, or XML.
 
+## Installation
+
+```shell
+git submodule add https://github.com/seanniu/dotbot-merge
+```
+
 ## Example
 
 ```yaml
