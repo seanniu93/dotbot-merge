@@ -189,7 +189,9 @@ class Merge(Plugin):
                 msg = f"source not found: {src}"
                 raise FileNotFoundError(msg)
             with open(src_path, "rb") as f:
-                pieces.append(f.read())
+                # Normalize fragment boundaries so a source's trailing newline
+                # does not stack with the plugin's blank-line separator.
+                pieces.append(f.read().rstrip(b"\r\n"))
 
         out = b"\n\n".join(pieces)
         if not out.endswith(b"\n"):
